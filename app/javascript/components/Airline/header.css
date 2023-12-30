@@ -1,0 +1,48 @@
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* padding: 20px; */
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Added margin for spacing */
+  }
+  
+  .airline-image {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 5px 5px 0 0;
+  }
+  
+  .header-content {
+    text-align: center;
+  }
+  
+  .rating-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px; /* Added margin for spacing */
+  }
+  
+  .star-filled {
+    color: gold;
+  }
+  
+  .star-empty {
+    color: #ccc;
+  }
+  
+  .user-icon {
+    margin-right: 5px;
+  }
+  
+  .reviews-info {
+    color: #6c757d;
+    margin-top: 10px; /* Added margin for spacing */
+  }
+  

@@ -5,8 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
-
 airlines = Airline.create([
   { 
     name: "United Airlines",
@@ -34,18 +32,28 @@ airlines = Airline.create([
   }
 ])
 
+reviews_data = [
+  { title: 'Great airline', description: 'I had a lovely time.', score: 5, airline: airlines.first },
+  { title: 'Good airline', description: 'I had a good experience.', score: 4, airline: airlines.first },
+  { title: 'Average airline', description: 'It was an okay experience.', score: 3, airline: airlines.first },
 
-reviews = Review.create([
-    {
-        title: 'greate airline',
-        description: 'I had lovely time.',
-        score: 5,
-        airline: airlines.first
-    },
-    {
-        title: 'bad airline',
-        description: 'I had bad time.',
-        score: 3,
-        airline: airlines.first
-    }
-])
+  { title: 'Excellent airline', description: 'Fantastic service!', score: 5, airline: airlines.second },
+  { title: 'Not bad', description: 'It could have been better.', score: 3, airline: airlines.second },
+  { title: 'Enjoyed the flight', description: 'Pleasant experience.', score: 4, airline: airlines.second },
+
+  { title: 'Fantastic airline', description: 'Outstanding service!', score: 5, airline: airlines.third },
+  { title: 'Could be better', description: 'Some improvements needed.', score: 3, airline: airlines.third },
+  { title: 'Great journey', description: 'Overall satisfied.', score: 4, airline: airlines.third },
+
+  { title: 'Amazing airline', description: 'Highly recommended!', score: 5, airline: airlines.fourth },
+  { title: 'Not the best', description: 'Needs improvement.', score: 2, airline: airlines.fourth },
+  { title: 'Satisfied', description: 'Met expectations.', score: 4, airline: airlines.fourth },
+
+  { title: 'Top-notch airline', description: 'Exceptional service!', score: 5, airline: airlines.fifth },
+  { title: 'Disappointing', description: 'Did not meet expectations.', score: 2, airline: airlines.fifth },
+  { title: 'Pleasant experience', description: 'Good overall.', score: 4, airline: airlines.fifth }
+]
+
+reviews_data.each do |review_data|
+  Review.create(review_data)
+end
